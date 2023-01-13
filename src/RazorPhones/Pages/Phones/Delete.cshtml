@@ -1,0 +1,54 @@
+﻿@page "{id:int}"
+@model RazorPhones.Pages.Phones.DeleteModel
+@{
+}
+<div class="text-center">
+    <h1 class="display-8">Delete selected phone</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Phone.Id"></label>
+                    <input asp-for="Phone.Id" readonly class="form-control" />
+                    <span asp-validation-for="Phone.Id" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone.Make"></label>
+                    <input asp-for="Phone.Make" readonly class="form-control" />
+                    <span asp-validation-for="Phone.Make" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone.Model"></label>
+                    <input asp-for="Phone.Model" readonly class="form-control" />
+                    <span asp-validation-for="Phone.Model" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone.RAM"></label>
+                    <input asp-for="Phone.RAM" readonly class="form-control" />
+                    <span asp-validation-for="Phone.RAM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone.PublishDate"></label>
+                    <input asp-for="Phone.PublishDate" readonly class="form-control" />
+                    <span asp-validation-for="Phone.PublishDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone.Created"></label>
+                    <input asp-for="Phone.Created" readonly class="form-control" />
+                    <span asp-validation-for="Phone.Created" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone.Modified"></label>
+                    <input asp-for="Phone.Modified" readonly class="form-control" />
+                    <span asp-validation-for="Phone.Modified" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

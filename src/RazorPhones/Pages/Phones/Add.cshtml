@@ -1,0 +1,41 @@
+﻿@page
+@model AddModel
+@{
+    ViewData["Title"] = "Phones - Add";
+}
+
+<div class="text-center">
+    <h1 class="display-8">Add new phones</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Add">
+                <div asp-validation-summary ="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Phone.Make"></label>
+                    <input asp-for="Phone.Make" class="form-control"/>
+                    <span asp-validation-for="Phone.Make" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone.Model"></label>
+                    <input asp-for="Phone.Model" class="form-control" />
+                    <span asp-validation-for="Phone.Model" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone.RAM"></label>
+                    <input asp-for="Phone.RAM" class="form-control" />
+                    <span asp-validation-for="Phone.RAM" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone.PublishDate"></label>
+                    <input asp-for="Phone.PublishDate" class="form-control" />
+                    <span asp-validation-for="Phone.PublishDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Phone database in Razor Pages</h1>
+    
+    <div>
+        <table>
+            <thead>
+                <tr>
+                   <td>Id</td>
+                   <td>Make</td>
+                   <td>Model</td>
+                   <td>PublishDate</td>
+                   <td>RAM</td>
+                   <td>Created</td>
+                   <td>Modified</td>
+                </tr>
+            </thead>
+            <tbody>
+                @if(Model.Phones != null) {
+                    foreach(var phone in Model.Phones) 
+                    {
+                    <tr>
+                        <td>@phone.Id</td>
+                        <td>@phone.Make</td>
+                        <td>@phone.Model</td>
+                        <td>@phone.PublishDate.Date</td>
+                        <td>@phone.RAM</td>
+                        <td>@phone.Created.Date</td>
+                        <td>@phone.Modified.Date</td>
+                    </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

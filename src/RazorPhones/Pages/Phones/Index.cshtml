@@ -1,0 +1,27 @@
+﻿@page
+@model PhonesModel
+@{
+    ViewData["Title"] = "Phones";
+}
+
+<div class="text-center">
+    <h4 class="display-10">Click belowe to add phones</h4>
+    <ul>
+        <li><a asp-page="Add">Add</a></li>
+    </ul>
+
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Here are all the phones</h1>
+    <ul>
+        @if(Model.Phones != null) {
+                @foreach(var phone in Model.Phones) {
+                <li>@phone.Make, @phone.Model, <a asp-page="./Edit" asp-route-id="@phone.Id">Edit</a>, <a asp-page="./Delete" asp-route-id="@phone.Id">Delete</a></li>
+                }
+        }    
+        </ul>
+</div>
+
+
+
